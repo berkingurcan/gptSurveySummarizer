@@ -36,14 +36,14 @@ const editModal = async (
     .setCustomId("titleInput")
     .setLabel("Edit your survey title?")
     .setStyle(TextInputStyle.Short)
-    .setPlaceholder(surveyTitle)
+    .setValue(surveyTitle)
     .setMaxLength(80)
     .setRequired(false);
 
   const descriptionInput = new TextInputBuilder()
     .setCustomId("descriptionInput")
     .setLabel("Write a short description for your survey")
-    .setPlaceholder(trimString(surveyDescription))
+    .setValue(trimString(surveyDescription))
     .setStyle(TextInputStyle.Paragraph)
     .setRequired(false);
 
@@ -58,7 +58,7 @@ const editModal = async (
     .setMaxLength(
       type === "single" ? 45 : 45 * maxResponsesForMultiResponsePerUser * 2,
     )
-    .setPlaceholder(trimString(surveyFields))
+    .setValue(trimString(surveyFields))
     .setRequired(false);
 
   const firstActionRow = new ActionRowBuilder().addComponents(titleInput);
