@@ -36,7 +36,7 @@ export const handleRespondButton = async (
       .setStyle(TextInputStyle.Paragraph)
       .setValue(defaultText)
       .setRequired(true);
-    modal.addComponents(new ActionRowBuilder().addComponents(responseInput));
+    modal.addComponents(new ActionRowBuilder<TextInputBuilder>().addComponents(responseInput));
   } else {
     let priorResponses = new Array(maxResponsesForMultiResponsePerUser).fill(
       "",
@@ -62,7 +62,7 @@ export const handleRespondButton = async (
           .setStyle(TextInputStyle.Paragraph)
           .setValue(priorResponses[i])
           .setRequired(i === 0);
-        return new ActionRowBuilder().addComponents(responseInput);
+        return new ActionRowBuilder<TextInputBuilder>().addComponents(responseInput);
       });
     modal.addComponents(components);
   }

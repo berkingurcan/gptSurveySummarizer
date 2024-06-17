@@ -2,7 +2,7 @@ import { expect as _expect } from 'chai';
 import { stub, restore } from 'sinon';
 const expect = _expect;
 import { Client } from 'discord.js';
-import { handleView } from '../src/commands/handleView';
+import { handleView } from '../src/commands/handleView.js';
 
 describe('handleView Command', function() {
   let client;

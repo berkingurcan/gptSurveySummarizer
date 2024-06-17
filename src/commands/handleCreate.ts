@@ -27,8 +27,8 @@ const createModal = async (
     .setLabel("Write a short description for your survey")
     .setStyle(TextInputStyle.Paragraph);
 
-  const firstActionRow = new ActionRowBuilder().addComponents(titleInput);
-  const secondActionRow = new ActionRowBuilder().addComponents(
+  const firstActionRow = new ActionRowBuilder<TextInputBuilder>().addComponents(titleInput);
+  const secondActionRow = new ActionRowBuilder<TextInputBuilder>().addComponents(
     descriptionInput,
   );
   modal.addComponents(firstActionRow, secondActionRow);

@@ -5,6 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "pretest": "tsc",
     "test": "mocha",
     "bot": "npx tsx src/bot.ts",
     "dev": "nodemon --exec npx tsx src/bot.ts",
@@ -20,17 +21,18 @@
     "discord.js": "^14.14.1",
     "dotenv": "^16.4.5",
     "eslint-import-resolver-typescript": "^3.6.1",
-    "mocha": "^10.4.0",
     "openai": "^4.31.0",
     "path": "^0.12.7",
     "redis": "^4.6.13",
     "sinon": "^18.0.0"
   },
   "devDependencies": {
+    "mocha": "^10.4.0",
     "nodemon": "^3.1.0",
     "prettier": "3.2.5",
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "tsx": "^4.11.0",
     "typescript": "^5.4.5"
   }

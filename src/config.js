@@ -3,16 +3,19 @@ import dotenv from "dotenv";
 
 dotenv.config({ path: `.env.local`, override: true });
 
+
 export const apikey = process.env.OPENAI_API_KEY;
 export const summarizeFrequency = process.env.SUMMARIZE_FREQUENCY_SECONDS;
 export const redisConfig = {
   password: process.env.REDIS_PASSWORD,
   socket: {
     host: process.env.REDIS_HOST,
-    port: process.env.REDIS_PORT,
+    port: parseInt(process.env.REDIS_PORT, 10), // Convert port to a number
+    tls: true
   },
-  tls: true,
+  tls: true
 };
+
 
 export const discordConfig = {
   token: process.env.DISCORD_TOKEN,
