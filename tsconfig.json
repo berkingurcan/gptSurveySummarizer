@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2020", 
-    "module": "ESNext", 
+    "module": "commonjs", 
     "esModuleInterop": true, 
     "allowJs": true, 
     "outDir": "./dist",
@@ -17,12 +17,11 @@
   },
   "include": [
     "src/**/*.ts", 
-    "src/**/*.js",
-    "test/**/*.ts", // Include test files
-    "test/**/*.js" 
+    "src/**/*.js" 
   ],
   "exclude": [
     "node_modules", 
     ".vscode",
+    "**/*.spec.ts"
   ]
 }
