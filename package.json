@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "pretest": "tsc",
-    "test": "mocha",
+    "test": "mocha --require tsconfig-paths/register \"dist/test/**/*.test.js\"",
     "bot": "npx tsx src/bot.ts",
     "dev": "nodemon --exec npx tsx src/bot.ts",
     "summarizer": "node src/summarizer.js",
